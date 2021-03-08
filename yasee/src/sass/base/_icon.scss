@@ -1,0 +1,17 @@
+.icon-big {
+	font-size: 7rem;
+	color: $color-main-light;
+    margin-bottom: 1rem;
+}
+
+.icon-small {
+    font-size: 3rem;
+    color: $color-main-light;
+    vertical-align: middle;
+    text-align: center;
+    padding-right: 1rem;
+
+    @include resp(medium-big) {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,341 @@
+
+.bg-img {
+    width: 100%;
+    height: 100vh;
+    opacity: .1;
+    position: fixed;
+    z-index: -1;
+
+    &__photo {
+        width: 100%;
+    }
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+
+    @include resp(medium-big) {
+        padding: 0;
+    }
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: .5rem .5rem 2rem rgba(black, .2);
+
+  @include resp(small) {
+      flex-direction: column;
+  }
+}
+
+.gallery {
+    display: flex;
+    margin: 0;
+    &__item {
+        margin: 0;
+    }
+    &__photo {
+        width: 100%;
+    }
+}
+
+.content {
+    flex: 9;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40rem;
+}
+
+.search-nav {
+    display: flex;
+    background-color: hsl(0, 0%, 96%);
+    margin: 0;
+    &__list {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: #222;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+
+        
+    }
+
+    &__item {
+        padding: 2rem 4rem;
+        transition: .2s;
+         border-bottom: 2px solid transparent;
+        &:hover {
+            background-color: hsl(0, 5%, 89%);
+        }
+
+        @include resp(medium-big) {
+            padding: 1.5rem 3rem;
+        }
+
+        @include resp(small) {
+            padding: 1rem 1.5rem;
+        }
+    }
+
+    &__active {
+        border-bottom: 2px solid yellow;
+        background-color: hsl(0, 5%, 89%);
+    }
+}
+
+.sidebar {
+    background-color: #222;
+    flex: 2;
+    padding-top: 5rem;
+
+    @include resp(small) {
+        display: flex;
+        padding-top: 2rem;
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+
+        @include resp(small) {
+            display: flex;
+        }
+    }
+
+    &__item {
+        margin-bottom: 5rem;
+        padding: 2rem 3.4rem;
+        transition: .2s;
+
+        &:hover {
+            background-color: #111;
+        }
+
+        @include resp(small) {
+            margin-bottom: 1rem;
+            padding: 1rem 2rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+             color: #eee;
+             font-size: 2.5rem;
+             text-decoration: none;
+        }
+
+        @include resp(medium-big) {
+           font-size: 2rem;
+        }
+
+        @include resp(small) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__active {
+        background-color: #111;
+        transform: scale(1.05);
+    }
+
+}
+
+.search {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &__input {
+        background-color: #d8d8d8af;
+        border-radius: 3px;
+        border: none;
+        padding: 1rem 2rem;
+        outline: none;
+        font-size: 1.6rem;
+        width: 30%;
+        transition: .3s;
+        
+        @include resp(medium) {
+            width: 50%;
+            margin-bottom: 2rem;
+        }
+
+        &:focus {
+            transform: translateX(-.5rem) translateY(-.5rem);
+            box-shadow: .5rem .5rem 1rem rgba(black, .3);
+        }
+    }
+
+    &__group {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include resp(medium) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    &__label {
+        display: inline-block;
+        font-size: 2rem;
+       margin-left: 1.8rem;
+        padding-top: 1rem;
+        transition: .5s;
+        opacity: 1;
+
+        @include resp(medium) {
+           display: none;
+        }
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+    }
+
+    &__select {
+        font-size: 2rem;
+        align-self: flex-start;
+        margin-top: 1rem;
+        margin-right: 5rem;
+        padding: .5rem 1rem;
+        outline: none;
+        border-radius: 3px;
+
+        @include resp(medium) {
+            align-self: initial;
+            margin-right: 0;
+            margin-bottom: 2rem;
+            display: none;
+        }
+    }
+
+    &__btn {
+      outline: none;
+      align-self: center;
+      padding: 1rem 2rem;
+      border: 1px solid transparent;
+      box-shadow: 0 0 1rem rgba(black, .3);
+      transition: .2s;
+      margin-left: 2rem;
+
+      @include resp(medium) {
+          align-self: initial;
+      }
+      
+      &:hover {
+          color: #fff;
+          transform: translateY(-.5rem) translateX(-.5rem);
+          box-shadow: 1rem 1rem 2rem rgba(black, .3);
+      }
+
+      &:active {
+          transform: translateY(-.2rem) translateX(-.2rem);
+          box-shadow: .5rem .5rem 1rem rgba(black, .3);
+      }
+
+      
+    }
+
+    &__result {
+        margin-top: 5rem;
+        width: 100%;
+
+        &__title {
+            text-align: center;
+            font-size: 3.2rem;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        margin-bottom: 2rem;
+        font-size: 2.8rem;
+        padding: 1.5rem 3rem;
+        text-align: center;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: .5s;
+        
+        &:nth-child(even) {
+            background-color: #eee;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.info {
+    padding: 4rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__img {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5rem;
+
+        @include resp(small) {
+            padding: 3rem;
+        }
+    }
+    &__photo {
+        height: 15rem;
+        margin: 3rem;
+
+        @include resp(small) {
+            margin: 1rem;
+        }
+    }
+
+    @include resp(small) {
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.booth {
+    &__img {
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    @include resp(small) {
+        width: 80%;
+    }
+}

@@ -1,0 +1,39 @@
+.section-about {
+	margin-top: 0px;
+	padding: 9rem 0px;
+	background-color: $color-gray-light2;
+
+}
+
+.section-pic {
+	padding: 0;
+	margin: 0;
+}
+
+.section-info {
+	padding: 9rem 0px;
+	background-color: $color-gray-light2;
+}
+
+.section-rank {
+	padding: 9rem 0px;
+	overflow: hidden;
+}
+
+.menu {
+	display: none;
+	position: relative;
+
+	@include resp(medium-1) {
+		display: block;
+		position: fixed;
+		right: 3rem;
+		top: 3rem;
+		color: #c5c5c5;
+		z-index: 999;
+	}
+
+	&-icon {
+		font-size: 5rem;
+	}
+}

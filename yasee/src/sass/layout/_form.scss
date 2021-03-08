@@ -1,0 +1,76 @@
+.signup {
+    position: relative;
+}
+
+.login {
+    position: relative;
+}
+
+.form {
+    @include absCenter;
+    transform: translate(-60%, 30%);
+    font-size: 1.6rem;
+
+    & h2::after {
+        display: none;
+    }
+
+    &__group {
+        margin: 2rem auto;
+    }
+
+    &__input {
+        display: block;
+        padding: 1rem 2rem;
+        border-radius: 3px;
+        font-size: 1.6rem;
+        font-family: inherit;
+        transition: all .2s;
+
+        &:focus {
+            outline: 1px solid $color-green-light;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+
+            &:invalid {
+                outline: 1px solid $color-main-dark;
+            }
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-left: 2.1rem;
+        margin-top: .4rem;
+        opacity: 1;
+        transition: all .4s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+
+    & .btn-submit {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+    }
+
+    & a {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all .4s;
+            padding: .6rem 1.2rem;
+            color: $color-main-light;
+        }
+
+        &:hover,
+        &:active {
+            background-color: $color-green-dark;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+    }
+}

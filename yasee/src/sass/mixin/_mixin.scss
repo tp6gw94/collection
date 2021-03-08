@@ -1,0 +1,42 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+
+@mixin resp($size) {
+    // 920px
+    @if $size == big {
+        @media screen and (max-width: 57.5em) { @content } 
+    };
+    // 773pxS
+    @if $size == medium-big {
+        @media screen and (max-width: 48.3125em) { @content}
+    };
+    // 700
+    @if $size == medium-1 {
+        @media screen and (max-width: 43.75em) { @content}
+    };
+    // 550px
+    @if $size == medium {
+        @media screen and (max-width: 34.375em) { @content}
+    };
+     // 500px
+    @if $size == small {
+        @media screen and (max-width: 31.25em) { @content}
+    };
+
+    @if $size == smaller {
+        @media screen and (max-width: 27.1875em) { @content}
+    };
+}

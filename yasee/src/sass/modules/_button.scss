@@ -1,0 +1,64 @@
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+    	border: 1px solid $color-main-light;
+    	border-radius: 4px;
+    	padding: 1.5rem 3rem;
+    	font-size: 2rem;
+    	transition: background-color 0.2s, color 0.2s, border 0.2s;
+        font-weight: 800;
+
+        @include resp(medium) {
+            padding: 1rem 2rem;
+        }
+
+        @include resp(smaller) {
+            padding: 1rem 1.5rem;
+            font-size: 1.5rem
+        }
+    }
+
+    &:hover,
+    &:active {
+        background-color: $color-main-dark;
+    	border: 1px solid $color-main-dark;
+    }
+
+}
+
+.btn-full {
+
+    &,
+    &:link,
+    &:visited {
+        margin-right: 3rem;
+    	background-color: $color-main-light;
+        color: #fff;
+        
+        @include resp(smaller) {
+            margin-right: .5rem;
+        }
+    }
+
+    &:hover,
+    &:active {
+        background-color: $color-main-dark;
+    	border: 1px solid $color-main-dark;
+    }
+}
+
+.btn-ghost {
+
+    &:link,
+    &:visited {
+        color: $color-main-light;
+    }
+
+    &:hover,
+    &:active {
+    	color: #fff;
+    }
+}

@@ -1,0 +1,19 @@
+header {
+	background-image:linear-gradient(rgba(69,69,69,0.7),rgba(69,69,69,0.7)),
+	url(../img/yaseebgr.jpg);
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-40%,-40%);
+	@include resp(smaller) {
+		width: 60%;
+		transform: translate(-30%, -30%);
+	}
+}

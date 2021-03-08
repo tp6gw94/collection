@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" href="logo.ico">
+    <title>註冊</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+</head>
+
+<body>
+    <div class="signup">
+        <form method="post" action="#" class="form">
+            <h2 class="heading-secondary">註冊</h2>
+            <div class="form__group">
+                <input type="text" id="username"
+                class="form__input" name="username" placeholder="Your name" required>
+                <label for="username" class="form__label">Your name</label>
+            </div>
+            <div class="form__group">
+                <input type="email" id="email" class="form__input" name="email" placeholder="Your email" required>
+                <label for="email" class="form__label">Your email</label>
+            </div>
+            <div class="form__group">
+                <input type="password" id="password1" class="form__input" name="password" placeholder="Your password" required>
+                <label for="password1" class="form__label">Your password</label>
+            </div>
+            <div class="form__group">
+                <input type="password" id="password2" class="form__input" name="password" placeholder="Repeat the password" required>
+                <label for="password2" class="form__label">Repeat the password</label>
+            </div>
+            <input class="btn btn-full btn-submit" type="submit" value="註冊">
+            <a href="./login.html">已經有帳號?</a>
+        </form>
+    </div>
+</body>
+
+</html>

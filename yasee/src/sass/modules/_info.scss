@@ -1,0 +1,45 @@
+.img-nightMarket {
+	width: 95%;
+    margin: 2rem auto;
+    margin-left: .5rem;
+
+    @include resp(medium-big) {
+        width: 100%;
+        padding: 2rem;
+        margin: 0;
+        margin-left: 0;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+}
+
+.info-box {
+	font-size: 1.6rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem 0 1rem;
+
+    @include resp(medium-big) {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       margin-top: 3rem;
+       font-size: 2.5rem;
+    }
+
+    & a:link,
+    & a:visited {
+        text-decoration: none;
+        text-align: center;
+        color: $color-main-light;
+        padding-bottom: 1px;
+        border-bottom: 1px solid $color-main-light;
+        transition: border-bottom 0.2s, color 0.2s;
+    }
+
+    & a:hover,
+    & a:active {
+        border-bottom: 0px solid $color-main-dark;
+        color: $color-main-dark;
+    }
+}

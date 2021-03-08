@@ -1,0 +1,115 @@
+.footer {
+    background-color: $color-gray-dark;
+    font-size: 1.4rem;
+    padding: 3rem;
+
+    @include resp(medium) {
+        padding: 1.5rem;
+    }
+
+    & p {
+        color: $color-gray-dark-2;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    &__nav {
+        float: left;
+
+        & li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 2rem;
+        }
+
+        &__item {
+            &:link,
+            &:visited {
+                display: inline-block;
+                text-decoration: none;
+                color: $color-gray-dark-2;
+                -webkit-transition: color 0.2s;
+                transition: all 0.2s;
+                padding: .4rem;
+            }
+
+            &:hover,
+            &:visited {
+                color: #fff;
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.51);
+                transform: scale(1.2) skewX(4deg) skewY(4deg);
+                background-color: $color-main-light;
+            }
+        }
+    }
+
+    &__social {
+        float: right;
+
+        @include resp(medium) {
+            float: left;
+        }
+
+        & li {
+            list-style: none;
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 3.5rem;
+            }
+        }
+
+        &__item {
+            font-size: 2rem;
+            vertical-align: middle;
+            margin-top: -5px;
+
+            &:link,
+            &:visited {
+                text-decoration: none;
+                color: $color-gray-dark-2;
+                -webkit-transition: color 0.2s;
+                transition: color 0.2s;
+            }
+        }
+    }
+}
+
+
+
+.ion-social-facebook {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $color-facebook;
+    }
+}
+
+.ion-social-twitter {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $color-twitter;
+    }
+}
+
+.ion-social-googleplus {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $color-google;
+    }
+}
+
+
+.ion-social-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $color-instagram;
+    }
+}

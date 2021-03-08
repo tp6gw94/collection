@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+html {
+    font-size: 62.5%;
+    @include resp(big) {
+        font-size: 50%;
+    }
+
+    @include resp(small) {
+        font-size: 40%;
+    }
+
+    @include resp(smaller) {
+        font-size: 30%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    font-family: 'cwTeXYen', serif;
+    
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+}

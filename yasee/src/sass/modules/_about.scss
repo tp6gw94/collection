@@ -1,0 +1,25 @@
+.about {
+
+    
+    &__box {
+        margin-top: 1rem;
+        padding: 3rem;
+
+        @include resp(medium-big) {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+        }
+    }
+
+    &__content {
+        font-size: 1.4rem;
+
+        @include resp(medium-big) {
+            font-size: 2.4rem;;
+        }
+    }
+}

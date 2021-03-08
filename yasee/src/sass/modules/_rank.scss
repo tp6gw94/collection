@@ -1,0 +1,109 @@
+.rank {
+
+    &__flex {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__box {
+        margint: 3rem;
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 50rem;
+        overflow: hidden;
+        padding: 3rem;
+        border-radius: 10px;
+        border: 1px solid $color-main-dark;
+        box-shadow: 5px 5px 20px rgba(black, .1);
+
+        @include resp(small) {
+            padding: 1rem;
+        }
+    
+    }
+
+    &__img-container {
+        width: 100%;
+        position: relative;
+    }
+
+    &__tag {
+        width: 4rem;
+        height: 8rem;
+        background-color: $color-main-light;
+        position: absolute;
+        right: 8%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+
+        &::before {
+            content: '瑞豐';
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            font-size: 2.4rem;
+            color: #fff;
+
+            top: 50%;
+            left: 50%   ;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__inner {
+        background-color: $color-gray-light2;
+        text-align: center;
+        display: inline-block;
+        font-size: 2rem;
+        padding: 3rem 0 3rem 0;
+        margin-bottom: 3rem;
+
+        &__content {
+            padding: 1rem;
+            margin-bottom: 3rem;
+            
+            @include resp(medium-big) {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    &__btn--blue {
+        &:link,
+    	&:visited {
+    		background-color: $color-bule-light;
+            border: 1px solid $color-bule-light;
+    	}
+
+        &:hover,
+    	&:active {
+    		background-color: $color-bule-dark;
+            border: 1px solid $color-bule-dark;
+    	}
+    }
+
+    &__btn--green {
+        &:link,
+    	&:visited {
+    		background-color: $color-green-dark;
+            border: 1px solid $color-green-dark;
+    	}
+
+        &:hover,
+    	&:active {
+    		background-color: $color-green-light;
+            border: 1px solid $color-green-light;
+    	}
+    }
+
+}

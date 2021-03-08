@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yasee</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/remodal-default-theme.css">
+    <link rel="stylesheet" href="./src/css/ionicons.min.css">
+    <link rel="stylesheet" href="./src/css/grid.min.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+    <div class="bg-img">
+        <img src="./src/img/yaseebgr.jpg" alt="yasee" class="bg-img__photo">
+    </div>
+    <div class="box">
+        <div class="container">
+            <div class="sidebar">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item  sidebar__active" id="ruifeng">
+                        <a href="#" class="sidebar__link">瑞豐夜市</a>
+                    </li>
+                    <li class="sidebar__item" id="sheng">
+                        <a href="#" class="sidebar__link">武聖夜市</a>
+                    </li>
+                    <li class="sidebar__item" id="fengjia">
+                        <a href="#" class="sidebar__link">逢甲夜市</a>
+                    </li>
+                    <li class="sidebar__item" id="gate">
+                        <a href="#" class="sidebar__link">東大門夜市</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <div class="gallery">
+                    <figure class="gallery__item">
+                        <img class="gallery__photo" src="./src/img/01.jpg" alt="1">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img class="gallery__photo" src="./src/img/02.jpg" alt="1">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img class="gallery__photo" src="./src/img/04.jpg" alt="1">
+                    </figure>
+                </div>
+
+                <div class="search-nav">
+                    <ul class="search-nav__list">
+                        <li class="search-nav__item  search-nav__active" id="nav-search">
+                            <a href="#" class="search-nav__link">搜尋</a>
+                        </li>
+                        <li class="search-nav__item" id="nav-info">
+                            <a href="#" class="search-nav__link">夜市資訊</a>
+                        </li>
+                        <li class="search-nav__item" id="nav-map">
+                            <a href="#" class="search-nav__link">夜市攤販地圖</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+
+                    <div class="search__group">
+                        <input class="search__input" type="text" name="searchInput" value="" id="searchInput" placeholder="搜尋">
+                        <label class="search__label" for="searchInput">搜尋</label>
+                        <button class="search__btn btn" id="searchBtn">搜尋</button>
+                    </div>
+                    <div class="search__result" style="display: none">
+                        <h2 class="search__result__title">查詢結果</h2>
+                        <ul class="search__list">
+                            <li class="search__item"></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="info" style="display: none">
+                    <h2 class="info__title">瑞豐夜市</h2>
+                    <p class="info__time">營業時間：每週二、四、五、六、日∕下午6:30至凌晨1:00</p>
+                    <p class="info__site">地址：高雄市左營區裕誠路和南屏路段</p>
+                    <p class="info__content">
+                        瑞豐夜市位於高雄市左營區裕誠路和南屏路段，夜市佔地近千坪，且擁有20年的歷史，規模可說是高雄規模最大且管理最優的夜市，目前擺設攤位超過1000個攤位，每個攤位所販賣的東西更是五花八門，包括小吃、服飾、流行飾品及各項娛樂攤位等等，已成為高雄市區民眾夜晚品嚐小吃、宵夜的聚集地。
+                    </p>
+                    <p class="info__train">
+                        大眾運輸 ◎ 捷運：搭乘高雄捷運至巨蛋站，出站後走博愛二路，右轉裕誠路，約400公尺抵達夜市。 ◎ 公車：於高雄火車站搭乘高雄市公車91、301、24號，於高雄市立三民家商下車，再步行即可到達瑞豐夜市。
+                    </p>
+                    <div class="info__img">
+                        <img src="https://khh.travel/FileArtPic.ashx?id=2552&w=900&h=500" alt="pic1" class="info__photo info__photo--1">
+                        <img src="https://foreignerintw.files.wordpress.com/2015/03/dsc_6079.jpg" alt="pic1" class="info__photo info__photo--2">
+                        <img src="http://s2.buzzhand.net/uploads/ba/5/1012192/15009528866074.jpg" alt="pic1" class="info__photo info__photo--3">
+                    </div>
+                </div>
+
+                <div class="booth" style="display: none">
+                    <img src="./src/img/booth.jpg" alt="booth" class="booth__img">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="pop" style="display: none">
+        <div class="pop__box">
+            <i class="material-icons pop__close">&#xE5CD;</i>
+            <iframe frameborder="0" class="pop__map" id="map" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDMvMeQTKhr4baY9dxrj4YmF2UiV0ORMs8&origin=25.0174716,121.3659516&destination=21.9930836,117.7338893&avoid=tolls|highways"
+                allowfullscreen>
+            </iframe>
+            <!-- <div class="pop__map" id="map"></div> -->
+            <div class="pop__description">
+                <h2 class="pop__title">檸檬愛玉</h2>
+                <h4 class="pop__site">第一排第一間</h4>
+                <p class="pop__description">Aliquip fugiat cupidatat laboris eiusmod. Lorem ut commodo esse amet occaecat fugiat esse sunt proident laborum.
+                    Voluptate do ex enim cupidatat cillum sunt culpa cupidatat fugiat enim. Sunt tempor ipsum irure amet
+                    veniam pariatur ullamco quis anim aliqua occaecat amet. Tempor cillum eu duis sunt ea voluptate enim
+                    elit eu dolor reprehenderit. Occaecat deserunt laboris officia ut magna in veniam veniam in velit velit
+                    dolore aliquip deserunt.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/js/jquery.min.js"></script>
+    <script src="./src/js/jquery.waypoints.min.js"></script>
+    <script src="./src/js/app.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBx-K_jNgRMzqI13zUVesWczLHozQUs--g&callback=initMap" async
+    defer></script> -->
+</body>
+
+</html>
