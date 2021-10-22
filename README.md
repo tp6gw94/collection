@@ -11,7 +11,7 @@ DEMO: https://tp6gw94.github.io/collection/yasee
 
 PDF: https://drive.google.com/file/d/1oQxgmBHzAGSJDbQxOGfAsfI21AccXt_c/view?usp=sharing
 
-## typescript + react + redux-toolkit + dnd-toolkit + Tailwind CSS
+## Typescript + React + Redux-oolkit + dnd-toolkit + Tailwind CSS
 DEMO: https://tp6gw94.github.io/collection/react-dnd-dashboard/
 
 repo: https://github.com/tp6gw94/dashboard-dnd-redux
